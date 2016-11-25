@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreeFileSync XmlFormat="5" XmlType="BATCH">
+    <MainConfig>
+        <Comparison>
+            <Variant>TimeAndSize</Variant>
+            <Symlinks>Exclude</Symlinks>
+            <IgnoreTimeShift/>
+        </Comparison>
+        <SyncConfig>
+            <Variant>Mirror</Variant>
+            <CustomDirections>
+                <LeftOnly>right</LeftOnly>
+                <RightOnly>left</RightOnly>
+                <LeftNewer>right</LeftNewer>
+                <RightNewer>left</RightNewer>
+                <Different>none</Different>
+                <Conflict>none</Conflict>
+            </CustomDirections>
+            <DetectMovedFiles>false</DetectMovedFiles>
+            <DeletionPolicy>RecycleBin</DeletionPolicy>
+            <VersioningFolder Style="Replace"/>
+        </SyncConfig>
+        <GlobalFilter>
+            <Include>
+                <Item>*</Item>
+            </Include>
+            <Exclude>
+                <Item>\System Volume Information\</Item>
+                <Item>\$Recycle.Bin\</Item>
+                <Item>\RECYCLER\</Item>
+                <Item>\RECYCLED\</Item>
+                <Item>*\desktop.ini</Item>
+                <Item>*\thumbs.db</Item>
+            </Exclude>
+            <TimeSpan Type="None">0</TimeSpan>
+            <SizeMin Unit="None">0</SizeMin>
+            <SizeMax Unit="None">0</SizeMax>
+        </GlobalFilter>
+        <FolderPairs>
+            <Pair>
+                <Left>C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar</Left>
+                <Right>C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Dropbox\z-warea</Left>
+                <Right>C:\Users\jarmengo\Google Drive\z-warea</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Dropbox\05-info_variada</Left>
+                <Right>C:\Users\jarmengo\Google Drive\05-info_variada</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Dropbox\04-finances</Left>
+                <Right>C:\Users\jarmengo\Google Drive\04-finances</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Dropbox\03-personal_info</Left>
+                <Right>C:\Users\jarmengo\Google Drive\03-personal_info</Right>
+            </Pair>
+        </FolderPairs>
+        <OnCompletion/>
+    </MainConfig>
+    <BatchConfig>
+        <HandleError>Popup</HandleError>
+        <RunMinimized>false</RunMinimized>
+        <LogfileFolder Limit="0"/>
+    </BatchConfig>
+</FreeFileSync>
