@@ -13,7 +13,8 @@ setlocal
 ::----------------  directorio del bat y path del fichero actual
 ::----------------  nota:  fichero con path %~f0 directorio del fichero %~dp0
 
-set diskBck=D:
+:: set diskBck=D:
+set diskBck=E:
 set workDir=%diskBck%\wrk_bckp
 set prsnlDir=%diskBck%\prsnl_bckp
 set zipProgram=%diskBck%\Zip7z
