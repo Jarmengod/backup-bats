@@ -39,31 +39,31 @@
         <FolderPairs>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\00-workarea</Left>
-                <Right>D:\wrk_bckp\00-workarea</Right>
+                <Right>E:\wrk_bckp\00-workarea</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\01-work</Left>
-                <Right>D:\wrk_bckp\01-work</Right>
+                <Right>E:\wrk_bckp\01-work</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\09-work_some_day</Left>
-                <Right>D:\wrk_bckp\09-work_some_day</Right>
+                <Right>E:\wrk_bckp\09-work_some_day</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\98-onenote-backup</Left>
-                <Right>D:\wrk_bckp\98-onenote-backup</Right>
+                <Right>E:\wrk_bckp\98-onenote-backup</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\Eclipse</Left>
-                <Right>D:\wrk_bckp\Eclipse</Right>
+                <Right>E:\wrk_bckp\Eclipse</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\emails</Left>
-                <Right>D:\wrk_bckp\emails</Right>
+                <Right>E:\wrk_bckp\emails</Right>
             </Pair>
             <Pair>
                 <Left>C:\Users\jarmengo\Documents\emails_nowork</Left>
-                <Right>D:\wrk_bckp\emails_nowork</Right>
+                <Right>E:\wrk_bckp\emails_nowork</Right>
             </Pair>
         </FolderPairs>
         <OnCompletion/>
