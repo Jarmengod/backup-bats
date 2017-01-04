@@ -25,8 +25,8 @@ echo.
 
 echo Iniciando copia fichero %fichero% en folder %folder% 
 echo.
-if exist "D:\prsnl_bckp\notes_prsnl.txt" del "D:\prsnl_bckp\notes_prsnl.txt"
-copy "C:\Users\jarmengo\Dropbox\notes_prsnl.txt"  D:\prsnl_bckp\notes_prsnl.txt
+if exist "E:\prsnl_bckp\notes_prsnl.txt" del "E:\prsnl_bckp\notes_prsnl.txt"
+copy "C:\Users\jarmengo\Dropbox\notes_prsnl.txt"  E:\prsnl_bckp\notes_prsnl.txt
 
 pause
 echo.
