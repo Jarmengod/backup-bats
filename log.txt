@@ -1,0 +1,291 @@
+ Start procces day 13/04/2017 and hour 15:41:16,70 
+  WARNING:  Conecta el HD externo
+Press any key to continue . . . 
+inicio subroutina ExistFileCSV
+variable 1 ##    source ;## destination 
+###########inside proceso procedimiento
+entra "##    source ;## destination" 
+variable vari1  ##    source ;## destination
+variable comentario ##
+linea de comentario ## y de variable "##    source ;## destination"
+variable 1 ##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea 
+###########inside proceso procedimiento
+entra "##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea" 
+variable vari1  ##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea
+variable comentario ##
+linea de comentario ## y de variable "##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea"
+variable 1 C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921;C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921;C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921" 
+variable vari1  C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921;C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source : C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921\
+     Dest : C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  29	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921\
+	                  16	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921\OneNote_RecycleBin\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         2         0         2         0         0         0
+   Files :        45         0        45         0         0         0
+   Bytes :  216.40 m         0  216.40 m         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : jueves, 13 de abril de 2017 15:41:26
+
+comentario #C:#
+#####################
+variable 1 ##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox  
+###########inside proceso procedimiento
+entra "##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox " 
+variable vari1  ##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox 
+variable comentario ##
+linea de comentario ## y de variable "##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox "
+variable 1 C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\;C:\Users\jarmengo\Documents\98-onenote-backup\ 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\;C:\Users\jarmengo\Documents\98-onenote-backup\" 
+variable vari1  C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\;C:\Users\jarmengo\Documents\98-onenote-backup\
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source : C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\
+     Dest : C:\Users\jarmengo\Documents\98-onenote-backup\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\
+	                  15	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\3D-Tatooine\
+	                   2	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\3D-Tatooine\OneNote_RecycleBin\
+	                   9	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\cadence\
+	                   7	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Caladan\
+	                   8	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\dagobahh\
+	                  10	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Eclipse-Gattaca-Linux\
+	                   7	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\EE_General_info\
+	                  14	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Guia.de.compras\
+	                   4	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Guia.de.compras\OneNote_RecycleBin\
+	                  23	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\hp work\
+	                   2	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\hp work\OneNote_RecycleBin\
+	                  29	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921\
+	                  16	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921\OneNote_RecycleBin\
+	                   5	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\legacy_hp_work\
+	                   2	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\legacy_hp_work\OneNote_RecycleBin\
+	                   4	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\My Notebook\
+	                   2	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\My Notebook\OneNote_RecycleBin\
+	                   4	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Team Site Notebook\
+	                   3	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Team Site Notebook\OneNote_RecycleBin\
+	                   7	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Varios_trabajo\
+	                   2	C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\Varios_trabajo\OneNote_RecycleBin\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        22         0        22         0         0         0
+   Files :       175         0       175         0         0         0
+   Bytes :   1.019 g         0   1.019 g         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : jueves, 13 de abril de 2017 15:41:26
+
+comentario #C:#
+#####################
+variable 1 ##                 Copy files dropbox        ;##               a Google drive   
+###########inside proceso procedimiento
+entra "##                 Copy files dropbox        ;##               a Google drive  " 
+variable vari1  ##                 Copy files dropbox        ;##               a Google drive  
+variable comentario ##
+linea de comentario ## y de variable "##                 Copy files dropbox        ;##               a Google drive  "
+variable 1 C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar" 
+variable vari1  C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source - C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar\
+     Dest - C:\Users\jarmengo\Google\
+
+    Files : 
+  Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+ERROR : Invalid Parameter #3 : "Drive\zz-clasificar_y_borrar"
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !
+comentario #C:#
+#####################
+variable 1 C:\Users\jarmengo\Dropbox\z-warea;C:\Users\jarmengo\Google Drive\z-warea 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\Dropbox\z-warea;C:\Users\jarmengo\Google Drive\z-warea" 
+variable vari1  C:\Users\jarmengo\Dropbox\z-warea;C:\Users\jarmengo\Google Drive\z-warea
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source - C:\Users\jarmengo\Dropbox\z-warea\
+     Dest - C:\Users\jarmengo\Google\
+
+    Files : 
+  Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+ERROR : Invalid Parameter #3 : "Drive\z-warea"
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !
+comentario #C:#
+#####################
+variable 1 C:\Users\jarmengo\Dropbox\05-info_variada;C:\Users\jarmengo\Google Drive\05-info_variada 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\Dropbox\05-info_variada;C:\Users\jarmengo\Google Drive\05-info_variada" 
+variable vari1  C:\Users\jarmengo\Dropbox\05-info_variada;C:\Users\jarmengo\Google Drive\05-info_variada
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source - C:\Users\jarmengo\Dropbox\05-info_variada\
+     Dest - C:\Users\jarmengo\Google\
+
+    Files : 
+  Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+ERROR : Invalid Parameter #3 : "Drive\05-info_variada"
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !
+comentario #C:#
+#####################
+variable 1 C:\Users\jarmengo\Dropbox\04-finances;C:\Users\jarmengo\Google Drive\04-finances 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\Dropbox\04-finances;C:\Users\jarmengo\Google Drive\04-finances" 
+variable vari1  C:\Users\jarmengo\Dropbox\04-finances;C:\Users\jarmengo\Google Drive\04-finances
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:26
+   Source - C:\Users\jarmengo\Dropbox\04-finances\
+     Dest - C:\Users\jarmengo\Google\
+
+    Files : 
+  Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+ERROR : Invalid Parameter #3 : "Drive\04-finances"
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !
+comentario #C:#
+#####################
+variable 1 C:\Users\jarmengo\Dropbox\03-personal_info;C:\Users\jarmengo\Google Drive\03-personal_info 
+###########inside proceso procedimiento
+entra "C:\Users\jarmengo\Dropbox\03-personal_info;C:\Users\jarmengo\Google Drive\03-personal_info" 
+variable vari1  C:\Users\jarmengo\Dropbox\03-personal_info;C:\Users\jarmengo\Google Drive\03-personal_info
+variable comentario C:
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : jueves, 13 de abril de 2017 15:41:27
+   Source - C:\Users\jarmengo\Dropbox\03-personal_info\
+     Dest - C:\Users\jarmengo\Google\
+
+    Files : 
+  Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+ERROR : Invalid Parameter #3 : "Drive\03-personal_info"
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !
+comentario #C:#
+#####################
+STARTTIME: 15:41:16,70
+ENDTIME: 15:41:27,10
+START BAT TIME: 13/04/2017 15:41:16,70 
+END BAT TIMD:   13/04/2017 15:41:27,10 
+DURATION BAT:  1040 in centiseconds and in time format 0:0:10,40
+ECHO is off.
+final 
+Press any key to continue . . . 
+No existe el fichero csv con los datos 
+Press any key to continue . . . 

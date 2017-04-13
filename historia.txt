@@ -1,0 +1,23 @@
+commit 2910f9e9df50e462b0619b3219fccec087a4bb6b
+Author: Armengod <josep.armengod@hp.com>
+Date:   Wed Jan 4 18:05:39 2017 +0100
+
+    issue 170104 fichero bat 20 copy notes prs cambio de disco D a E
+
+commit aa32e1f982f4dd6c56993c7a9c91ddc24608b0d5
+Author: Armengod <josep.armengod@hp.com>
+Date:   Wed Jan 4 17:55:03 2017 +0100
+
+    issue 170104 fichero bat de ffs 21 y 22, cambio disco duro D por E
+
+commit 5f5f5ef846b2fd809a482fa52c7f276f5b5267e8
+Author: Armengod <josep.armengod@hp.com>
+Date:   Wed Jan 4 13:11:15 2017 +0100
+
+    Error 170104: cambio disco backup de D a E. Toco solo variable
+
+commit ebdaa1582275375fd614842d85ba0b73d2750cc4
+Author: Armengod <josep.armengod@hp.com>
+Date:   Fri Nov 25 11:53:07 2016 +0100
+
+    Rev 1.0 161125
