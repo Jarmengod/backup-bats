@@ -4,7 +4,9 @@
 :: Metodo con bucle buscador de directorio
 :: rev 2: con llamadas a funciones 
 ::##########################################################
-
+:: log
+:: issue 170504  Nuevo directorio de trabajo principal Onedrive - Hewlett-Packard
+::                cambio variable ffsbatchDir
 
 @echo off
 cls
@@ -15,7 +17,7 @@ setlocal
 
 set diskBck=C:
 set FFSdir="C:\Program Files\FreeFileSync"
-set ffsbatchDir=C:\Users\jarmengo\Documents\00-workarea\freefilesync
+set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
 set zipProgram=%diskBck%\Zip7z
 :: set prsnlDir=%diskBck%\prsnl_bckp
 

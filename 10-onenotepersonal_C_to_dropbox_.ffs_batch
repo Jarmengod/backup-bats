@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FreeFileSync XmlFormat="5" XmlType="BATCH">
+<FreeFileSync XmlFormat="7" XmlType="BATCH">
     <MainConfig>
         <Comparison>
             <Variant>TimeAndSize</Variant>
@@ -38,7 +38,7 @@
         </GlobalFilter>
         <FolderPairs>
             <Pair>
-                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921</Left>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\JAR_Personal_onenote-150921</Left>
                 <Right>C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921</Right>
             </Pair>
         </FolderPairs>

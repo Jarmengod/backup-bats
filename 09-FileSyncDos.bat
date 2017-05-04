@@ -4,7 +4,11 @@
 :: Metodo con bucle buscador de directorios
 :: y con llamadas a funciones 
 ::##########################################################
-
+::  log 
+::  170504 Directorios de trabajo principal en OneDrive - Hewlett-Packard 
+::         cambio en variable directorio, cambio en fichero.csv
+::
+::#############################################################
 
 
 :: 
@@ -16,7 +20,8 @@ setlocal EnableDelayedExpansion
 ::-------------------  
 
 
-set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+:: set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+set directorio="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
 set file=%directorio%\fichero.csv
 set vari=00
 set comentVariable=##
@@ -118,7 +123,7 @@ echo linea de comentario %comentario% y de variable %1%
 		for /F "tokens=1-2 delims=;" %%a in ("%vari%") do (
 			echo  copi from %%a   to %%b 
 			:: pause
-			ROBOCOPY  %%a %%b  /mir
+			ROBOCOPY  "%%a" "%%b"  /mir
 			:: echo ro %1% mir
 			echo comentario #%comentario%#
 			echo #####################

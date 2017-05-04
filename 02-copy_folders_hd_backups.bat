@@ -4,7 +4,9 @@
 :: Metodo con bucle buscador de directorios y con llamadas a funciones
 ::    
 ::##########################################################
-
+:: log history
+::   issue170504  Nuevo directorio principal de trabajo OneDrive - Hewlett-Packard
+ 
 
 @echo off
 cls
@@ -15,7 +17,7 @@ setlocal
 
 
 set Hdisk=C:
-set documents=%Hdisk%\Users\jarmengo\Documents
+set documents=%Hdisk%"\Users\jarmengo\OneDrive - Hewlett-Packard"
 set dropbox=%Hdisk%\Users\jarmengo\Dropbox
 
 
@@ -60,9 +62,9 @@ call:timeCalcul
 cls
 rem outputing
 
-echo STARTTIME: %DATE% %STARTTIME% 
-echo ENDTIME:   %DATE% %ENDTIME% 
-echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo START TIME: %DATE% %STARTTIME% 
+echo END TIME:   %DATE% %ENDTIME% 
+echo WORKING TIME:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
 
 echo
 echo final 
