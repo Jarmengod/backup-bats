@@ -19,12 +19,17 @@ setlocal EnableDelayedExpansion
 ::-------------------  directorio del bat y path del fichero donde estan los directorios a compararactual
 ::-------------------  
 
+set verbose=0
+set VRBS=.................... 
 
-:: set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
-set directorio="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
-set file=%directorio%\fichero.csv
+set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+:: set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
+set dirtemp=C:\temp
+set other="%directorio%\fichero.csv"
+set file=%dirtemp%\fichero.csv
 set vari=00
 set comentVariable=##
+
 
 
 ::###############   Main
@@ -35,7 +40,11 @@ echo  Start procces day %date% and hour %time%
 rem The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+copy %other% %file%
+
 echo   WARNING:  Conecta el HD externo
+				if %verbose% == 1 echo %VRBS%  fichero config en %file%  
+				if %verbose% == 1 echo %VRBS%  y en variable other %other%
 pause
 
 ::---------------  copiar pst de emails - trabajo 
@@ -44,21 +53,24 @@ call:ExistFileCSV
  
 ::---------------  comprobar los directorios del fichero 
 
-
+CLS
 echo fichero csv de configuracion %file%
-:: pause
+				if %verbose% == 1 echo %VRBS% Inicio bucle de recogida info fichero config
+				if %verbose% == 1 pause
 for /F "tokens=*" %%a in (%file%) do (
-	echo variable 1 %%a 
-	::  pause
+				if %verbose% == 1 echo %VRBS% variable 1 %%a 
+				if %verbose% == 1 pause
 	call:proceso "%%a"
+	CLS
 	)
 		
-
+del %file%
 ::--------------- Fin de compression: calculo de tiempo 
 
 call:timeCalcul
 
 ::---------------  Report time
+
 
 cls
 rem outputing
@@ -91,7 +103,7 @@ exit
 ::---------------------  subroutina ExistFileCSV
 ::  -----------    comprueba que el fichero existe
 :ExistFileCSV     - comprueba que tenemos el fichero de directorios a revisar
-
+CLS
 title Comprobando fichero csv
 echo inicio subroutina ExistFileCSV
 set notFile=""
@@ -100,7 +112,7 @@ if not exist %file% (
 	set notFile=%file%
 	goto :No_fichero
 ) 
-:: pause
+			if %verbose% == 1 pause
 goto:eof
 
 ::---------------------  subroutina proceso
@@ -113,20 +125,25 @@ goto:eof
     echo entra %1% 
 							::	set vari=%1%
 		set comentario=%vari:~0,2%
-					:: echo la variable a es %1%  
-						:: echo la variable b es %2%
-	 echo variable vari1  %vari%
-	echo variable comentario %comentario%
+						if %verbose% == 1 echo %VRBS% la variable a es %1%  
+						if %verbose% == 1 echo %VRBS% la variable b es %2%
+						if %verbose% == 1 echo %VRBS% variable vari1  %vari%
+						if %verbose% == 1 echo %VRBS% variable comentario %comentario%
  if %comentario%==%comentVariable% (
 echo linea de comentario %comentario% y de variable %1%
 ) else (
 		for /F "tokens=1-2 delims=;" %%a in ("%vari%") do (
 			echo  copi from %%a   to %%b 
-			:: pause
+						if %verbose% == 1  pause
+						
 			ROBOCOPY  "%%a" "%%b"  /mir
-			:: echo ro %1% mir
+			
 			echo comentario #%comentario%#
 			echo #####################
+			
+			if %verbose% == 1 echo %VRBS% fin del ROBOCOPY MIR
+			if %verbose% == 1 pause
+			
 			)
 		)
 

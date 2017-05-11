@@ -1,0 +1,34 @@
+## release 170504  Directorio principal de trabajo Onedrive - Hewlett-Packard, change order ;
+##    source ;## destination
+##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea
+C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\JAR_Personal_onenote-150921;C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921
+##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox 
+C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\15.0\Backup\;C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup
+##                 Copy files dropbox        ;##               a Google drive  
+C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar
+C:\Users\jarmengo\Dropbox\z-warea;C:\Users\jarmengo\Google Drive\z-warea
+C:\Users\jarmengo\Dropbox\05-info_variada;C:\Users\jarmengo\Google Drive\05-info_variada
+C:\Users\jarmengo\Dropbox\04-finances;C:\Users\jarmengo\Google Drive\04-finances
+C:\Users\jarmengo\Dropbox\03-personal_info;C:\Users\jarmengo\Google Drive\03-personal_info
+##                copy Onedrive - Hewlett-Packard ;##     a  Documents
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea;C:\Users\jarmengo\Documents\00-workarea
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\01-work;C:\Users\jarmengo\Documents\01-work
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\02-work_old_projects;C:\Users\jarmengo\Documents\02-work_old_projects
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\09-work_some_day;C:\Users\jarmengo\Documents\09-work_some_day
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-Onenote_jar;C:\Users\jarmengo\Documents\98-Onenote_jar
+C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup;C:\Users\jarmengo\Documents\98-onenote-backup
+##                   copy  Dropbox y evernote;##               a   HD 
+C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;E:\prsnl_bckp\zz-clasificar_y_borrar
+C:\Users\jarmengo\Dropbox\z-warea;E:\prsnl_bckp\z-warea
+C:\Users\jarmengo\Dropbox\05-info_variada;E:\prsnl_bckp\05-info_variada
+C:\Users\jarmengo\Dropbox\04-finances;E:\prsnl_bckp\04-finances
+C:\Users\jarmengo\Dropbox\03-personal_info;E:\prsnl_bckp\03-personal_info
+C:\Users\jarmengo\Evernote;E:\prsnl_bckp\Evernote
+##              copy documents;##                a HD
+C:\Users\jarmengo\Documents\00-workarea;E:\wrk_bckp\00-workarea
+C:\Users\jarmengo\Documents\01-work;E:\wrk_bckp\01-work
+C:\Users\jarmengo\Documents\09-work_some_day;E:\wrk_bckp\09-work_some_day
+C:\Users\jarmengo\Documents\98-onenote-backup;E:\wrk_bckp\98-onenote-backup
+C:\Users\jarmengo\Documents\Eclipse;E:\wrk_bckp\Eclipse
+C:\Users\jarmengo\Documents\emails;E:\wrk_bckp\emails
+C:\Users\jarmengo\Documents\emails_nowork;E:\wrk_bckp\emails_nowork
