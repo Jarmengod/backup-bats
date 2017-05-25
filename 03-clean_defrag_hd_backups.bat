@@ -47,14 +47,17 @@ echo  Start procces day %date% and hour %time%
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+if exist %logfile%  del %logfile%
 echo start  %STARTTIME% >%logfile%
+
 
 cls
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
+					
 
-if exist %logfile%  del %logfile%
 					if %verbose% == 1 echo %VRBS%  fichero log en %logfile%
-					:: pause
+					pause
+
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -147,7 +150,9 @@ cd %workDir%
 echo Current dir "%CD%" 
  pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
-	c:\windows\SYSTEM32\cleanmgr.exe /dE: >> %logfile% && type %logfile%
+	c:\windows\SYSTEM32\cleanmgr.exe /dE: >> %logfile%
+	
+	:: >> %logfile% && type %logfile%
 	
 	
 	
@@ -173,7 +178,8 @@ echo  Current dir "%CD%"
 
 ::---- Bucle de busqueda de directorios y compresion de todos menos zz_dirs
 
-	defrag.exe %diskBck% /U /V >> %logfile% && type %logfile%
+	defrag.exe %diskBck% /U /V >> %logfile%
+	:: >> %logfile% && type %logfile%
 
  pause 
 goto:eof 

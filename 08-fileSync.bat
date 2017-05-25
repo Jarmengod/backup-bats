@@ -24,7 +24,7 @@ set FFSdir="C:\Program Files\FreeFileSync"
 set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
 set zipProgram=%diskBck%\Zip7z
 :: set prsnlDir=%diskBck%\prsnl_bckp
-set logfile=c:\temp\03-clean_defrag-log.txt
+set logfile=c:\temp\08-fileSync-log.txt
 
 
 

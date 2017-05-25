@@ -22,13 +22,14 @@ setlocal EnableDelayedExpansion
 set verbose=0
 set VRBS=.................... 
 
-set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
-:: set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
+::set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
 set dirtemp=C:\temp
 set other="%directorio%\fichero.csv"
 set file=%dirtemp%\fichero.csv
 set vari=00
 set comentVariable=##
+set logfile=c:\temp\09-FileSyncDos_log.txt
 
 
 
@@ -40,7 +41,15 @@ echo  Start procces day %date% and hour %time%
 rem The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+if exist %logfile%  del %logfile%
+if exist %file% del %file%
+echo start  %STARTTIME% >%logfile%
+
+					if %verbose% == 1 echo %VRBS%  Verbose activado
+
+
 copy %other% %file%
+
 
 echo   WARNING:  Conecta el HD externo
 				if %verbose% == 1 echo %VRBS%  fichero config en %file%  
@@ -77,12 +86,14 @@ rem outputing
 
 echo START BAT TIME: %DATE% %STARTTIME% 
 echo END BAT TIMD:   %DATE% %ENDTIME% 
-echo DURATION BAT:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo DURATION BAT:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
 
 pause  
+
+START notepad.exe %logfile%
 
 endlocal
 
@@ -129,6 +140,7 @@ goto:eof
 						if %verbose% == 1 echo %VRBS% la variable b es %2%
 						if %verbose% == 1 echo %VRBS% variable vari1  %vari%
 						if %verbose% == 1 echo %VRBS% variable comentario %comentario%
+						if %verbose% == 1 pause
  if %comentario%==%comentVariable% (
 echo linea de comentario %comentario% y de variable %1%
 ) else (
@@ -136,7 +148,8 @@ echo linea de comentario %comentario% y de variable %1%
 			echo  copi from %%a   to %%b 
 						if %verbose% == 1  pause
 						
-			ROBOCOPY  "%%a" "%%b"  /mir
+			ROBOCOPY  "%%a" "%%b"  /mir >> %logfile%
+			
 			
 			echo comentario #%comentario%#
 			echo #####################
