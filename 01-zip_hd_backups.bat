@@ -32,6 +32,7 @@ set zipProgram=%diskBck%\Zip7z
 set dirRepositorio=zz_repositorio
 set dirOldBackups=zzz_olds_bck
 
+set logfile=c:\temp\01-clean_defrag-log.txt
 
 ::###############   Main
 
@@ -40,6 +41,9 @@ set dirOldBackups=zzz_olds_bck
 echo  Start procces day %date% and hour %time% 
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
+echo start  %STARTTIME% >%logfile%
+
+
 
 cls
 
@@ -66,7 +70,7 @@ rem outputing
 
 echo STARTTIME: %DATE% %STARTTIME% 
 echo ENDTIME:   %DATE% %ENDTIME% 
-echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
@@ -98,7 +102,7 @@ exit
 
 title Comprobando directorios 
 
-echo inicio subroutina Exitsfiles
+echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %workDir% ( 
@@ -142,8 +146,8 @@ for /D %%d in (*.*) do (
 	 
   if not "%%d"=="%dirOldBackups%" (
 		if not "%%d"=="%dirRepositorio%" (
-			echo comprimiendo %%d con %zipProgram%
- 		    %zipProgram%\7z a -t7z %%~nd.7z %%d
+			echo comprimiendo %%d con %zipProgram% >> %logfile% && type %logfile%
+ 		    %zipProgram%\7z a -t7z %%~nd.7z %%d  >> %logfile% && type %logfile%
 		) 
      		
     ) 
@@ -168,8 +172,8 @@ cd %prsnlDir%
 
 for /D %%x in (*) do ( 
 		if not "%%x"=="%dirOldBackups%" (
-			echo  comprimiendo %%x 	
-			%zipProgram%\7z a -t7z %%x.7z %%x
+			echo  comprimiendo %%x 	 >> %logfile% && type %logfile%
+			%zipProgram%\7z a -t7z %%x.7z %%x >> %logfile% && type %logfile%
 			) 
 		  )
 	

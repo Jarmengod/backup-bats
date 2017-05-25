@@ -36,6 +36,8 @@ set prsnlDir=%diskBck%\prsnl_bckp
 set dirRepositorio=zz_repositorio
 set dirOldBackups=zzz_olds_bck
 
+set logfile=c:\temp\02_copy_folder-log.txt
+
 
 ::###############   Main
 
@@ -45,8 +47,13 @@ echo  Start procces day %date% and hour %time%
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+echo start  %STARTTIME% >%logfile%
+
 cls
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
+					
+if exist %logfile%  del %logfile%
+
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
 
@@ -68,12 +75,14 @@ rem outputing
 
 echo START TIME: %DATE% %STARTTIME% 
 echo END TIME:   %DATE% %ENDTIME% 
-echo WORKING TIME:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo WORKING TIME:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
 
 pause  
+
+START notepad.exe %logfile%
 
 endlocal
 goto :EOF
@@ -100,7 +109,7 @@ exit
 
 title Comprobando directorios 
 
-echo inicio subroutina Exitsfiles
+echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %workDir% ( 
@@ -128,7 +137,7 @@ goto:eof
 
 :compWorkDir		- funcion que comprime los directorios del wrk_bckp
 
-title comprimiendo pst %workDir%
+title comprimiendo pst %workDir% 
 
 				if %verbose% == 1 echo %VRBS%   tendriamos que ir a %workDir%
 %diskBck%
@@ -147,7 +156,7 @@ for /D %%d in (%workDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d"
+						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
 						'xcopy /s /y /v /e "%%a" "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
@@ -184,7 +193,7 @@ for /D %%d in (%prsnlDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d"
+						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
 						rd /s /q "%%~nd_old"

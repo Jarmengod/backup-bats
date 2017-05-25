@@ -1,3 +1,9 @@
+commit d903e1c41422acce4af8585a7e6a5f75719a94b6
+Author: Armengod <josep.armengod@hp.com>
+Date:   Thu May 25 11:04:10 2017 +0200
+
+    issue170520  Add verbose option
+
 commit e194aeb9550dac9fbef4073c17e7f07757568603
 Author: Armengod <josep.armengod@hp.com>
 Date:   Thu May 11 11:15:57 2017 +0200

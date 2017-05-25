@@ -25,7 +25,7 @@ set workDirOne=%diskBck%\emails
 set prsnlDirOne=%diskBck%\emails_nowork
 set zipProgram="C:\Program Files\7-Zip\"
 
-
+set logfile=c:\temp\18-pst_onedrive-log.txt
 
 ::###############   Main
 
@@ -35,8 +35,12 @@ echo  Start procces day %date% and hour %time%
 rem The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
-				if %verbose% == 1 echo %VRBS%  Verbose activado
+echo start  %STARTTIME% >%logfile%
 
+cls
+					if %verbose% == 1 echo %VRBS%  Verbose activado 
+					
+if exist %logfile%  del %logfile%
 
 echo   WARNING:  Cierra Outlook antes de seguir 
 pause
@@ -68,12 +72,15 @@ rem outputing
 
 echo START BAT TIME: %DATE% %STARTTIME% 
 echo END BAT TIMD:   %DATE% %ENDTIME% 
-echo DURATION BAT:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo DURATION BAT:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
 
+
 pause  
+
+START notepad.exe %logfile%
 
 endlocal
 goto :EOF
@@ -100,7 +107,7 @@ exit
 
 title Comprobando directorios 
 
-echo inicio subroutina Exitsfiles
+echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %workDirDoc% ( 
@@ -147,7 +154,7 @@ goto:eof
 cls
 title copiar directorio %workDirDoc%
 
-xcopy /s /y /v %workDirDoc% %workDirOne%
+xcopy /s /y /v %workDirDoc% %workDirOne% >> %logfile% && type %logfile%
   
 goto:eof
 
@@ -160,7 +167,7 @@ goto:eof
 
 title copiar directorio %prsnlDir%
 
-xcopy /s /y /v %prsnlDirDoc% %prsnlDirOne%
+xcopy /s /y /v %prsnlDirDoc% %prsnlDirOne% >> %logfile% && type %logfile%
  
 
 goto:eof
@@ -186,7 +193,7 @@ if exist *.zip del *.zip
 
 for %%x in (*.pst) do ( 
   echo  comprimiendo %%x
-  %zipProgram%\7z a -tzip %%~nx.zip %%x
+  %zipProgram%\7z a -tzip %%~nx.zip %%x >> %logfile% && type %logfile%
   echo comprimido %%x en %%~nx.zip 
 
   )
@@ -216,7 +223,7 @@ if exist *.zip del *.zip
 
 for %%x in (*.pst) do ( 
   echo  comprimiendo %%x
-  %zipProgram%\7z a -tzip %%~nx.zip %%x
+  %zipProgram%\7z a -tzip %%~nx.zip %%x >> %logfile% && type %logfile%
   echo comprimido %%x en %%~nx.zip 
 
   )

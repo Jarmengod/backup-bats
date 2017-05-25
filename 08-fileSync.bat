@@ -24,6 +24,7 @@ set FFSdir="C:\Program Files\FreeFileSync"
 set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
 set zipProgram=%diskBck%\Zip7z
 :: set prsnlDir=%diskBck%\prsnl_bckp
+set logfile=c:\temp\03-clean_defrag-log.txt
 
 
 
@@ -36,11 +37,14 @@ set zipProgram=%diskBck%\Zip7z
 echo  Start procces day %date% and hour %time% 
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
+echo start  %STARTTIME% >%logfile%
 
 
 cls
 
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
+
+if exist %logfile%  del %logfile%
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -62,12 +66,14 @@ rem outputing
 
 echo STARTTIME: %DATE% %STARTTIME% 
 echo ENDTIME:   %DATE% %ENDTIME% 
-echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
 
 pause  
+
+START notepad.exe %logfile%
 
 endlocal
 goto :EOF
@@ -93,7 +99,7 @@ exit
 
 title Comprobando directorios 
 
-echo inicio subroutina Exitsfiles
+echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %FFSdir% ( 
@@ -131,7 +137,7 @@ cd %ffsbatchDir%
 for %%f in (*.ffs_batch) do ( 
 	 
  			echo sincronizando %%f con FreeFileSyn
- 		    %FFSdir%\FreeFileSync.exe %%f
+ 		    %FFSdir%\FreeFileSync.exe %%f >> %logfile% && type %logfile%
 		) 
      		
     ) 

@@ -36,6 +36,8 @@ set prsnlDir=%diskBck%\prsnl_bckp
 set dirRepositorio=zz_repositorio
 set dirOldBackups=zzz_olds_bck
 
+set logfile=c:\temp\03-clean_defrag-log.txt
+
 
 ::###############   Main
 
@@ -45,8 +47,14 @@ echo  Start procces day %date% and hour %time%
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+echo start  %STARTTIME% >%logfile%
+
 cls
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
+
+if exist %logfile%  del %logfile%
+					if %verbose% == 1 echo %VRBS%  fichero log en %logfile%
+					:: pause
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -69,18 +77,20 @@ rem outputing
 
 echo STARTTIME: %DATE% %STARTTIME% 
 echo ENDTIME:   %DATE% %ENDTIME% 
-echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
+echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
 echo final 
 
 pause  
 
+START notepad.exe %logfile%
+
 endlocal
 goto :EOF
 
 :No_fichero
-echo No existe directorio %notFile%
+echo No existe directorio %notFile% >> %logfile% && type %logfile%
 pause
 
 
@@ -101,7 +111,7 @@ exit
 
 title Comprobando directorios 
 
-echo inicio subroutina Exitsfiles
+echo inicio subroutina Exitsfiles  >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %workDir% ( 
@@ -134,10 +144,10 @@ title Vaciando papelera de  %diskBck%
 				if %verbose% == 1 echo %VRBS%   tendriamos que ir a %diskBck%
 %diskBck%
 cd %workDir%
-Current dir "%CD%" 
+echo Current dir "%CD%" 
  pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
-	c:\windows\SYSTEM32\cleanmgr.exe /dE: 
+	c:\windows\SYSTEM32\cleanmgr.exe /dE: >> %logfile% && type %logfile%
 	
 	
 	
@@ -163,7 +173,7 @@ echo  Current dir "%CD%"
 
 ::---- Bucle de busqueda de directorios y compresion de todos menos zz_dirs
 
-	defrag.exe %diskBck% /U /V
+	defrag.exe %diskBck% /U /V >> %logfile% && type %logfile%
 
  pause 
 goto:eof 
