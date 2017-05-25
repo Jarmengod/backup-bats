@@ -13,6 +13,9 @@ setlocal
 ::##############   Variables 
 ::-------------------  directorio del bat y path del fichero actual
 ::-------------------  nota:  fichero con path %~f0 directorio del fichero %~dp0
+set verbose=0
+set VRBS=.................... 
+
 
 set documents="C:\Users\jarmengo\Documents"
 set diskBck="C:\Users\jarmengo\OneDrive - Hewlett-Packard"
@@ -31,6 +34,9 @@ set zipProgram="C:\Program Files\7-Zip\"
 echo  Start procces day %date% and hour %time% 
 rem The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
+
+				if %verbose% == 1 echo %VRBS%  Verbose activado
+
 
 echo   WARNING:  Cierra Outlook antes de seguir 
 pause

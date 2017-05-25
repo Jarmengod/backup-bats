@@ -15,6 +15,10 @@ setlocal
 ::----------------  directorio del bat y path del fichero actual
 ::----------------  nota:  fichero con path %~f0 directorio del fichero %~dp0
 
+set verbose=0
+set VRBS=.................... 
+
+
 
 set Hdisk=C:
 set documents=%Hdisk%"\Users\jarmengo\OneDrive - Hewlett-Packard"
@@ -42,7 +46,7 @@ echo  Start procces day %date% and hour %time%
 set STARTTIME=%TIME%
 
 cls
-
+					if %verbose% == 1 echo %VRBS%  Verbose activado 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
 
@@ -126,10 +130,10 @@ goto:eof
 
 title comprimiendo pst %workDir%
 
-echo tendriamos que ir a %workDir%
+				if %verbose% == 1 echo %VRBS%   tendriamos que ir a %workDir%
 %diskBck%
 cd %workDir%
-echo  Current dir "%CD%" 
+				if %verbose% == 1 echo %VRBS%  Current dir "%CD%" 
 :: pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
 	

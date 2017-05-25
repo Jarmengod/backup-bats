@@ -15,6 +15,10 @@ setlocal
 ::---------------   directorio del bat y path del fichero actual
 ::---------------   nota:  fichero con path %~f0 directorio del fichero %~dp0
 
+set verbose=0
+set VRBS=.................... 
+
+
 set diskBck=C:
 set FFSdir="C:\Program Files\FreeFileSync"
 set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync"
@@ -33,8 +37,10 @@ echo  Start procces day %date% and hour %time%
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
 
+
 cls
 
+					if %verbose% == 1 echo %VRBS%  Verbose activado 
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -118,7 +124,7 @@ title sincronizando folders
 echo tendriamos que ir a %ffsbatchDir%
 %diskBck%
 cd %ffsbatchDir%
-echo  Current dir "%CD%" 
+					if %verbose% == 1 echo %VRBS%  Current dir "%CD%" 
 :: pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
 					

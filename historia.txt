@@ -1,3 +1,21 @@
+commit e194aeb9550dac9fbef4073c17e7f07757568603
+Author: Armengod <josep.armengod@hp.com>
+Date:   Thu May 11 11:15:57 2017 +0200
+
+    issue 170511 Add verbose and check correct funcionality with paht wint space
+
+commit db9903e93a0e21e39ea38c9ac744cddf1815aa9d
+Author: Armengod <josep.armengod@hp.com>
+Date:   Thu May 4 17:49:05 2017 +0200
+
+    issue170504: New principal work folder Onedrive - Hewlett-Packard
+
+commit 12e62992dc6ac4fe4bba53348caa66c08f111365
+Author: Armengod <josep.armengod@hp.com>
+Date:   Thu Apr 13 16:17:38 2017 +0200
+
+    issue170412  Sincronizar directorios con robocopy /mir crear 09-FileSyncDos.bat
+
 commit 2910f9e9df50e462b0619b3219fccec087a4bb6b
 Author: Armengod <josep.armengod@hp.com>
 Date:   Wed Jan 4 18:05:39 2017 +0100

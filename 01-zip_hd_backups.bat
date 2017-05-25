@@ -13,11 +13,19 @@ setlocal
 ::----------------  directorio del bat y path del fichero actual
 ::----------------  nota:  fichero con path %~f0 directorio del fichero %~dp0
 
+
+set verbose=0
+set VRBS=.................... 
+
+
 :: set diskBck=D:
 set diskBck=E:
 set workDir=%diskBck%\wrk_bckp
 set prsnlDir=%diskBck%\prsnl_bckp
 set zipProgram=%diskBck%\Zip7z
+
+
+
 
 ::---------------- directorios a no comprimir
 		
@@ -34,6 +42,8 @@ echo  Start procces day %date% and hour %time%
 set STARTTIME=%TIME%
 
 cls
+
+					if %verbose% == 1 echo %VRBS%  Verbose activado 
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -121,10 +131,10 @@ goto:eof
 
 title comprimiendo pst %workDir%
 
-echo tendriamos que ir a %workDir%
+			if %verbose% == 1 echo %VRBS%  tendriamos que ir a %workDir%
 %diskBck%
 cd %workDir%
-echo  Current dir "%CD%" 
+			if %verbose% == 1 echo %VRBS%  Current dir "%CD%" 
 :: pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
 					
@@ -152,7 +162,7 @@ goto:eof
 title comprimiendo pst %prsnlDir%
 
 cd %prsnlDir%
-echo  Current dir "%CD%" 
+				if %verbose% == 1 echo %VRBS%    Current dir "%CD%" 
 
 ::---- Bucle de busqueda de directorios y compresion de todos menos zz_dirs
 

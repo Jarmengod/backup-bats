@@ -3,6 +3,13 @@
 
 :: rev 2.0 copia en directorio Ubuntu One pasa a ser comentario (Ubuntu One a desaparecido)
 @ECHO OFF
+
+
+set verbose=0
+set VRBS=.................... 
+
+
+
 set fichero=notes_prsnl
 set folder=backup_hd
 set folder2=Google Drive
@@ -10,6 +17,7 @@ set folder3=Ubuntu One
 
 :: echo prueba directorio ubuntu one 
 :: dir "C:\Users\jarmengo\Ubuntu One"
+if %verbose% == 1 echo %VRBS%  Verbose activado
 
 cls
 title Backup fichero de Notas personales
