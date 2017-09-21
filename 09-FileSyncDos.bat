@@ -27,8 +27,8 @@ set false=0
 set reporttxt=0
 
 
-set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
-:: set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
+:: set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats
 set dirtemp=C:\temp
 
 if exist E:\prsnl_bckp set other="%directorio%\diskE_fichero.csv"
@@ -58,6 +58,8 @@ echo start  %STARTTIME%
 
 					if %verbose% == 1 echo %VRBS%  Verbose activado
 
+					if %verbose% == 1 echo %VRBS%  el fichero csv es el %other%
+					if %verbose% == 1 echo %VRBS%  y ira a %file%
 
 copy %other% %file%
 
