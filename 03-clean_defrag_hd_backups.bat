@@ -20,21 +20,27 @@ set VRBS=....................
 
 
 set Hdisk=C:
-set documents=%Hdisk%\Users\jarmengo\Documents
-set dropbox=%Hdisk%\Users\jarmengo\Dropbox
+:: set documents=%Hdisk%\Users\jarmengo\Documents
+:: set dropbox=%Hdisk%\Users\jarmengo\Dropbox
 set programsPath=%Hdisk%\windows\SYSTEM32\
 
 
-:: set diskBck=D:
+::  busca en que unidad logica esta el HD de backup
 set diskBck=E:
-set workDir=%diskBck%\wrk_bckp
-set prsnlDir=%diskBck%\prsnl_bckp
+
+if exist E:\prsnl_bckp set diskBck=E:
+if exist F:\prsnl_bckp set diskBck=F:
+if exist G:\prsnl_bckp set diskBck=G:
+
+
+:: set workDir=%diskBck%\wrk_bckp
+:: set prsnlDir=%diskBck%\prsnl_bckp
 ::  set zipProgram=%diskBck%\Zip7z
 
 ::---------------- directorios a no comprimir
 		
-set dirRepositorio=zz_repositorio
-set dirOldBackups=zzz_olds_bck
+:: set dirRepositorio=zz_repositorio
+:: set dirOldBackups=zzz_olds_bck
 
 set logfile=c:\temp\03-clean_defrag-log.txt
 
@@ -48,6 +54,7 @@ echo  Start procces day %date% and hour %time%
 set STARTTIME=%TIME%
 
 if exist %logfile%  del %logfile%
+echo start  %STARTTIME%
 echo start  %STARTTIME% >%logfile%
 
 
@@ -59,8 +66,6 @@ cls
 					pause
 
 
-::----------------  Accion de comprobar que existen los directorios
-call:Exitsfiles
 
 ::---------------- Accion sobre HD de backup   Borrar definitivamente el disco duro
 call:cleanupDiskBck
@@ -80,6 +85,7 @@ rem outputing
 
 echo STARTTIME: %DATE% %STARTTIME% 
 echo ENDTIME:   %DATE% %ENDTIME% 
+echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS%
 echo DURATION:  %DURATION% in centiseconds and in time format %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> %logfile% && type %logfile%
 
 echo
@@ -92,9 +98,7 @@ START notepad.exe %logfile%
 endlocal
 goto :EOF
 
-:No_fichero
-echo No existe directorio %notFile% >> %logfile% && type %logfile%
-pause
+
 
 
 : exit
@@ -107,34 +111,7 @@ exit
 ::   Function section
 :: ----------------------------------------
 
-::---------------   Subroutina Exitsfiles:  
-::---------------      comprueba que los directorios a trabajar existen, devuelve el directorio no existente
 
-:Exitsfiles          - comprobacion de que existen directorios 
-
-title Comprobando directorios 
-
-echo inicio subroutina Exitsfiles  >> %logfile% && type %logfile%
-set notFile=""
- 
-if not exist %workDir% ( 
-			set notFile=%workDir%
-			goto :No_fichero
-)
-
-
-if not exist %prsnlDir% (
-			set notFile=%prsnlDir%
-			goto :No_fichero 
-)
-
-
-:: if not exist %zipProgram% ( 			set notFile=%zipProgram%; 			goto :No_fichero  ) 
-
-echo fin subroutina de Existsfiles
-::  pause
-
-goto:eof 
 
 ::---------------   Subroutina cleanupDiskBck:  
 ::---------------		 Deberia vaciar la recicle bin
@@ -150,12 +127,14 @@ cd %workDir%
 echo Current dir "%CD%" 
  pause
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
-	c:\windows\SYSTEM32\cleanmgr.exe /dE: >> %logfile%
-	
-	:: >> %logfile% && type %logfile%
+	:: c:\windows\SYSTEM32\cleanmgr.exe /dF: 
 	
 	
 	
+if exist E:\prsnl_bckp c:\windows\SYSTEM32\cleanmgr.exe /dE: 
+if exist F:\prsnl_bckp c:\windows\SYSTEM32\cleanmgr.exe /dF: 
+if exist G:\prsnl_bckp c:\windows\SYSTEM32\cleanmgr.exe /dG:
+
 :: pause 
 goto:eof
 
@@ -169,8 +148,7 @@ goto:eof
   
 title Defragmentando %diskBck%
 
-:: cd %diskBck% 
-:: echo  Current dir "%CD%" 
+
 %Hdisk%
 cd %programsPath%
 echo  Current dir "%CD%" 
@@ -178,7 +156,8 @@ echo  Current dir "%CD%"
 
 ::---- Bucle de busqueda de directorios y compresion de todos menos zz_dirs
 
-	defrag.exe %diskBck% /U /V >> %logfile%
+	defrag.exe %diskBck% /U /V 
+	:: >> %logfile%
 	:: >> %logfile% && type %logfile%
 
  pause 

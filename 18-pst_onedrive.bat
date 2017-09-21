@@ -154,7 +154,8 @@ goto:eof
 cls
 title copiar directorio %workDirDoc%
 
-xcopy /s /y /v %workDirDoc% %workDirOne% >> %logfile% && type %logfile%
+xcopy /s /y /v %workDirDoc% %workDirOne% 
+			:: >> %logfile% && type %logfile%
   
 goto:eof
 
@@ -167,7 +168,8 @@ goto:eof
 
 title copiar directorio %prsnlDir%
 
-xcopy /s /y /v %prsnlDirDoc% %prsnlDirOne% >> %logfile% && type %logfile%
+xcopy /s /y /v %prsnlDirDoc% %prsnlDirOne% 
+			::>> %logfile% && type %logfile%
  
 
 goto:eof
@@ -193,7 +195,8 @@ if exist *.zip del *.zip
 
 for %%x in (*.pst) do ( 
   echo  comprimiendo %%x
-  %zipProgram%\7z a -tzip %%~nx.zip %%x >> %logfile% && type %logfile%
+  %zipProgram%\7z a -tzip %%~nx.zip %%x 
+		:: >> %logfile% && type %logfile%
   echo comprimido %%x en %%~nx.zip 
 
   )
@@ -223,7 +226,8 @@ if exist *.zip del *.zip
 
 for %%x in (*.pst) do ( 
   echo  comprimiendo %%x
-  %zipProgram%\7z a -tzip %%~nx.zip %%x >> %logfile% && type %logfile%
+  %zipProgram%\7z a -tzip %%~nx.zip %%x 
+			:: >> %logfile% && type %logfile%
   echo comprimido %%x en %%~nx.zip 
 
   )

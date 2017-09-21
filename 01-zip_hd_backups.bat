@@ -12,14 +12,22 @@ setlocal
 ::##############   Variables 
 ::----------------  directorio del bat y path del fichero actual
 ::----------------  nota:  fichero con path %~f0 directorio del fichero %~dp0
+set true=1
+set false=0
 
-
-set verbose=0
+set verbose=%true%
 set VRBS=.................... 
+set reporttxt=%false%
 
 
-:: set diskBck=D:
 set diskBck=E:
+
+if exist E:\prsnl_bckp set diskBck=E:
+if exist F:\prsnl_bckp set diskBck=F:
+if exist G:\prsnl_bckp set diskBck=G:
+
+
+:: set diskBck=F:
 set workDir=%diskBck%\wrk_bckp
 set prsnlDir=%diskBck%\prsnl_bckp
 set zipProgram=%diskBck%\Zip7z
@@ -41,13 +49,11 @@ set logfile=c:\temp\01-clean_defrag-log.txt
 echo  Start procces day %date% and hour %time% 
 		:: The format of %TIME% is HH:MM:SS,CS for example 23:59:59,99
 set STARTTIME=%TIME%
-echo start  %STARTTIME% >%logfile%
-
-
-
-cls
+echo start  %STARTTIME% 
+					if %reporttxt% EQU %true% echo start %STARTTIME% >%logfile%	
 
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
+
 
 ::----------------  Accion de comprobar que existen los directorios
 call:Exitsfiles
@@ -101,8 +107,8 @@ exit
 :Exitsfiles          - comprobacion de que existen directorios 
 
 title Comprobando directorios 
-
-echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
+echo inicio subroutina Exitsfiles 
+			if %reporttxt% EQU %true%  echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
 set notFile=""
  
 if not exist %workDir% ( 
@@ -143,15 +149,22 @@ cd %workDir%
 ::-----  Bucle de busqueda de directorios y compresion de todos menos zz_dirs				
 					
 for /D %%d in (*.*) do ( 
-	 
-  if not "%%d"=="%dirOldBackups%" (
+				if %verbose% == %true% echo %VRBS%  %%d i  %%~nd 
+	  if not "%%d"=="%dirOldBackups%" (
 		if not "%%d"=="%dirRepositorio%" (
-			echo comprimiendo %%d con %zipProgram% >> %logfile% && type %logfile%
- 		    %zipProgram%\7z a -t7z %%~nd.7z %%d  >> %logfile% && type %logfile%
-		) 
-     		
-    ) 
-)
+			echo comprimiendo %%d con %zipProgram%
+						if %reporttxt% EQU %true% ( echo comprimiendo %%d con %zipProgram% >> %logfile% && type %logfile% )
+ 		  
+				if %reporttxt% EQU %false%	( %zipProgram%\7z a -t7z %%~nd.7z %%d )
+				)
+			
+		
+		
+		)
+				
+		)
+	  
+  
 :: pause 
 goto:eof
 
@@ -173,9 +186,11 @@ cd %prsnlDir%
 for /D %%x in (*) do ( 
 		if not "%%x"=="%dirOldBackups%" (
 			echo  comprimiendo %%x 	 >> %logfile% && type %logfile%
-			%zipProgram%\7z a -t7z %%x.7z %%x >> %logfile% && type %logfile%
+			 if %reporttxt% EQU %true% ( %zipProgram%\7z a -t7z %%x.7z %%x >> %logfile% && type %logfile% )
+			 if %reporttxt% EQU %false%	(  %zipProgram%\7z a -t7z %%x.7z %%x )
+				)
 			) 
-		  )
+		  
 	
 :: pause 
 goto:eof 

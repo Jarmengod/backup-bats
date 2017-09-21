@@ -22,10 +22,20 @@ setlocal EnableDelayedExpansion
 set verbose=0
 set VRBS=.................... 
 
-::set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
-set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
+set true=1
+set false=0
+set reporttxt=0
+
+
+set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
+:: set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea\freefilesync
 set dirtemp=C:\temp
-set other="%directorio%\fichero.csv"
+
+if exist E:\prsnl_bckp set other="%directorio%\diskE_fichero.csv"
+if exist F:\prsnl_bckp set other="%directorio%\diskF_fichero.csv"
+if exist G:\prsnl_bckp set other="%directorio%\diskG_fichero.csv"
+
+:: set other="%directorio%\fichero.csv"
 set file=%dirtemp%\fichero.csv
 set vari=00
 set comentVariable=##
@@ -43,7 +53,8 @@ set STARTTIME=%TIME%
 
 if exist %logfile%  del %logfile%
 if exist %file% del %file%
-echo start  %STARTTIME% >%logfile%
+echo start  %STARTTIME% 
+					if %reporttxt% EQU %true% echo start %STARTTIME% >%logfile%
 
 					if %verbose% == 1 echo %VRBS%  Verbose activado
 
@@ -93,7 +104,7 @@ echo final
 
 pause  
 
-START notepad.exe %logfile%
+if %reporttxt% EQU %true% (START notepad.exe %logfile% )
 
 endlocal
 
@@ -147,9 +158,13 @@ echo linea de comentario %comentario% y de variable %1%
 		for /F "tokens=1-2 delims=;" %%a in ("%vari%") do (
 			echo  copi from %%a   to %%b 
 						if %verbose% == 1  pause
-						
-			ROBOCOPY  "%%a" "%%b"  /mir >> %logfile%
+			if %reporttxt% EQU %true% (
+				ROBOCOPY  "%%a" "%%b"  /mir >> %logfile%
+			) else ( 
+				ROBOCOPY  "%%a" "%%b"  /mir)
+				   )	
 			
+
 			
 			echo comentario #%comentario%#
 			echo #####################

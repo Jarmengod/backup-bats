@@ -15,6 +15,13 @@ set folder=backup_hd
 set folder2=Google Drive
 set folder3=Ubuntu One
 
+:: busca en que unidad logica esta el HD de backup
+set diskBck=E:
+
+if exist E:\prsnl_bckp set diskBck=E:
+if exist F:\prsnl_bckp set diskBck=F:
+if exist G:\prsnl_bckp set diskBck=G:
+
 :: echo prueba directorio ubuntu one 
 :: dir "C:\Users\jarmengo\Ubuntu One"
 if %verbose% == 1 echo %VRBS%  Verbose activado
@@ -33,8 +40,10 @@ echo.
 
 echo Iniciando copia fichero %fichero% en folder %folder% 
 echo.
-if exist "E:\prsnl_bckp\notes_prsnl.txt" del "E:\prsnl_bckp\notes_prsnl.txt"
-copy "C:\Users\jarmengo\Dropbox\notes_prsnl.txt"  E:\prsnl_bckp\notes_prsnl.txt
+
+	if exist "%diskBck%\prsnl_bckp\notes_prsnl.txt" del "%diskBck%\prsnl_bckp\notes_prsnl.txt"
+	copy "C:\Users\jarmengo\Dropbox\notes_prsnl.txt"  %diskBck%\prsnl_bckp\notes_prsnl.txt
+
 
 pause
 echo.

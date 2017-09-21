@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreeFileSync XmlFormat="7" XmlType="BATCH">
+    <MainConfig>
+        <Comparison>
+            <Variant>TimeAndSize</Variant>
+            <Symlinks>Exclude</Symlinks>
+            <IgnoreTimeShift/>
+        </Comparison>
+        <SyncConfig>
+            <Variant>Mirror</Variant>
+            <CustomDirections>
+                <LeftOnly>right</LeftOnly>
+                <RightOnly>left</RightOnly>
+                <LeftNewer>right</LeftNewer>
+                <RightNewer>left</RightNewer>
+                <Different>none</Different>
+                <Conflict>none</Conflict>
+            </CustomDirections>
+            <DetectMovedFiles>false</DetectMovedFiles>
+            <DeletionPolicy>RecycleBin</DeletionPolicy>
+            <VersioningFolder Style="Replace"/>
+        </SyncConfig>
+        <GlobalFilter>
+            <Include>
+                <Item>*</Item>
+            </Include>
+            <Exclude>
+                <Item>\System Volume Information\</Item>
+                <Item>\$Recycle.Bin\</Item>
+                <Item>\RECYCLER\</Item>
+                <Item>\RECYCLED\</Item>
+                <Item>*\desktop.ini</Item>
+                <Item>*\thumbs.db</Item>
+            </Exclude>
+            <TimeSpan Type="None">0</TimeSpan>
+            <SizeMin Unit="None">0</SizeMin>
+            <SizeMax Unit="None">0</SizeMax>
+        </GlobalFilter>
+        <FolderPairs>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\00-workarea</Left>
+                <Right>F:\wrk_bckp\00-workarea</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\01-work</Left>
+                <Right>F:\wrk_bckp\01-work</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\09-work_some_day</Left>
+                <Right>F:\wrk_bckp\09-work_some_day</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\98-onenote-backup</Left>
+                <Right>F:\wrk_bckp\98-onenote-backup</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\Eclipse</Left>
+                <Right>F:\wrk_bckp\Eclipse</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\emails</Left>
+                <Right>F:\wrk_bckp\emails</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\Documents\emails_nowork</Left>
+                <Right>F:\wrk_bckp\emails_nowork</Right>
+            </Pair>
+        </FolderPairs>
+        <OnCompletion/>
+    </MainConfig>
+    <BatchConfig>
+        <HandleError>Popup</HandleError>
+        <RunMinimized>false</RunMinimized>
+        <LogfileFolder Limit="0"/>
+    </BatchConfig>
+</FreeFileSync>

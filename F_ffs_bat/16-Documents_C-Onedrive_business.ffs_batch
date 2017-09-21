@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreeFileSync XmlFormat="7" XmlType="BATCH">
+    <MainConfig>
+        <Comparison>
+            <Variant>TimeAndSize</Variant>
+            <Symlinks>Exclude</Symlinks>
+            <IgnoreTimeShift/>
+        </Comparison>
+        <SyncConfig>
+            <Variant>Mirror</Variant>
+            <CustomDirections>
+                <LeftOnly>right</LeftOnly>
+                <RightOnly>none</RightOnly>
+                <LeftNewer>right</LeftNewer>
+                <RightNewer>none</RightNewer>
+                <Different>none</Different>
+                <Conflict>none</Conflict>
+            </CustomDirections>
+            <DetectMovedFiles>false</DetectMovedFiles>
+            <DeletionPolicy>RecycleBin</DeletionPolicy>
+            <VersioningFolder Style="Replace"/>
+        </SyncConfig>
+        <GlobalFilter>
+            <Include>
+                <Item>*</Item>
+            </Include>
+            <Exclude>
+                <Item>\System Volume Information\</Item>
+                <Item>\$Recycle.Bin\</Item>
+                <Item>\RECYCLER\</Item>
+                <Item>\RECYCLED\</Item>
+                <Item>*\desktop.ini</Item>
+                <Item>*\thumbs.db</Item>
+            </Exclude>
+            <TimeSpan Type="None">0</TimeSpan>
+            <SizeMin Unit="None">0</SizeMin>
+            <SizeMax Unit="None">0</SizeMax>
+        </GlobalFilter>
+        <FolderPairs>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\00-workarea</Left>
+                <Right>C:\Users\jarmengo\Documents\00-workarea</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\01-work</Left>
+                <Right>C:\Users\jarmengo\Documents\01-work</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\02-work_old_projects</Left>
+                <Right>C:\Users\jarmengo\Documents\02-work_old_projects</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\09-work_some_day</Left>
+                <Right>C:\Users\jarmengo\Documents\09-work_some_day</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-OneNotes_jar</Left>
+                <Right>C:\Users\jarmengo\Documents\98-OneNotes_jar</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup</Left>
+                <Right>C:\Users\jarmengo\Documents\98-onenote-backup</Right>
+            </Pair>
+        </FolderPairs>
+        <OnCompletion/>
+    </MainConfig>
+    <BatchConfig>
+        <HandleError>Popup</HandleError>
+        <RunMinimized>false</RunMinimized>
+        <LogfileFolder Limit="-1"/>
+    </BatchConfig>
+</FreeFileSync>

@@ -25,13 +25,10 @@ set Hdisk=C:
 set documents=%Hdisk%"\Users\jarmengo\OneDrive - Hewlett-Packard"
 set dropbox=%Hdisk%\Users\jarmengo\Dropbox
 
-::  busca en que unidad logica esta el HD de backup
-set diskBck=E:
 
-if exist E:\prsnl_bckp set diskBck=E:
-if exist F:\prsnl_bckp set diskBck=F:
-if exist G:\prsnl_bckp set diskBck=G:
-
+:: set diskBck=D:
+:: set diskBck=E:
+set diskBck=F:
 set workDir=%diskBck%\wrk_bckp
 set prsnlDir=%diskBck%\prsnl_bckp
 ::  set zipProgram=%diskBck%\Zip7z
@@ -54,7 +51,8 @@ set STARTTIME=%TIME%
 if exist %logfile%  del %logfile%
 
 	if %reporttxt% EQU %true% echo start  %STARTTIME% >%logfile%
-		else echo start  %STARTTIME% 
+		 if %reporttxt% EQU %false%  echo start  %STARTTIME% 
+		 
 
 cls
 					if %verbose% == 1 echo %VRBS%  Verbose activado 
@@ -115,10 +113,10 @@ exit
 
 title Comprobando directorios 
 
-if %reporttxt% EQU %true% e >> %logfile% && type %logfile%
-	else echo inicio subroutina Exitsfiles
+if %reporttxt% EQU %true% echo inicio subroutina Exitsfiles >> %logfile% && type %logfile%
+	echo inicio subroutina Exitsfiles
 set notFile=""
- 
+ pause
 if not exist %workDir% ( 
 			set notFile=%workDir%
 			goto :No_fichero
@@ -163,7 +161,8 @@ for /D %%d in (%workDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						if %reporttxt% EQU %true% robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						if %reporttxt% EQU %false% robocopy /e "%%a" "%%d" 
 						::xcopy /s /y /v /e "%%a" "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
@@ -200,7 +199,8 @@ for /D %%d in (%prsnlDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						if %reporttxt% EQU %true% robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						if %reporttxt% EQU %false% robocopy /e "%%a" "%%d" 
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
 						rd /s /q "%%~nd_old"

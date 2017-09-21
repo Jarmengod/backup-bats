@@ -67,6 +67,6 @@
     <BatchConfig>
         <HandleError>Popup</HandleError>
         <RunMinimized>false</RunMinimized>
-        <LogfileFolder Limit="0"/>
+        <LogfileFolder Limit="-1"/>
     </BatchConfig>
 </FreeFileSync>

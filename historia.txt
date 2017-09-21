@@ -1,3 +1,9 @@
+commit cca4e8b3bf98ba887d6b10d352a57419f3b2dc5b
+Author: Armengod <josep.armengod@hp.com>
+Date:   Thu May 25 16:13:08 2017 +0200
+
+    issue170525  Add logfile
+
 commit cae8eea340c6d4e86ac9da8c1980f049a5b88e6f
 Author: Armengod <josep.armengod@hp.com>
 Date:   Thu May 25 12:26:44 2017 +0200

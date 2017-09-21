@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreeFileSync XmlFormat="7" XmlType="BATCH">
+    <MainConfig>
+        <Comparison>
+            <Variant>TimeAndSize</Variant>
+            <Symlinks>Exclude</Symlinks>
+            <IgnoreTimeShift/>
+        </Comparison>
+        <SyncConfig>
+            <Variant>Mirror</Variant>
+            <CustomDirections>
+                <LeftOnly>right</LeftOnly>
+                <RightOnly>left</RightOnly>
+                <LeftNewer>right</LeftNewer>
+                <RightNewer>left</RightNewer>
+                <Different>none</Different>
+                <Conflict>none</Conflict>
+            </CustomDirections>
+            <DetectMovedFiles>false</DetectMovedFiles>
+            <DeletionPolicy>RecycleBin</DeletionPolicy>
+            <VersioningFolder Style="Replace"/>
+        </SyncConfig>
+        <GlobalFilter>
+            <Include>
+                <Item>*</Item>
+            </Include>
+            <Exclude>
+                <Item>\System Volume Information\</Item>
+                <Item>\$Recycle.Bin\</Item>
+                <Item>\RECYCLER\</Item>
+                <Item>\RECYCLED\</Item>
+                <Item>*\desktop.ini</Item>
+                <Item>*\thumbs.db</Item>
+            </Exclude>
+            <TimeSpan Type="None">0</TimeSpan>
+            <SizeMin Unit="None">0</SizeMin>
+            <SizeMax Unit="None">0</SizeMax>
+        </GlobalFilter>
+        <FolderPairs>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\legacy_hp_work</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\legacy_hp_work</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\Caladan</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\Caladan</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\3D-Tatooine</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\3D-Tatooine</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\cadence</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\cadence</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\dagobahh</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\dagobahh</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\Eclipse-Gattaca-Linux</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\Eclipse-Gattaca-Linux</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\EE_General_info</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\EE_General_info</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\Guia.de.compras</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\Guia.de.compras</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\hp work</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\hp work</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\JAR_Personal_onenote-150921</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\JAR_Personal_onenote-150921</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\My Notebook</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\My Notebook</Right>
+            </Pair>
+            <Pair>
+                <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\Varios_trabajo</Left>
+                <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup\Varios_trabajo</Right>
+            </Pair>
+        </FolderPairs>
+        <OnCompletion/>
+    </MainConfig>
+    <BatchConfig>
+        <HandleError>Popup</HandleError>
+        <RunMinimized>false</RunMinimized>
+        <LogfileFolder Limit="-1"/>
+    </BatchConfig>
+</FreeFileSync>

@@ -6,5 +6,6 @@ Repositorio con los ficheros bat que utilizo para backups semanales
 ## issue170511  comprobar problemas con robocopy y path con espacios; introduccion del verbose
 ## issue170520  Verbose en fichero bat
 ## issue170525  Salida info en fichero log
+## issue170920  Buscar que disco esta el HD backup 
 
  
