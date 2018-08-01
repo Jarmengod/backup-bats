@@ -163,7 +163,8 @@ for /D %%d in (%workDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						robocopy /e "%%a" "%%d" 
+						::>> %logfile% && type %logfile%
 						::xcopy /s /y /v /e "%%a" "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
@@ -200,7 +201,8 @@ for /D %%d in (%prsnlDir%\*.*) do (
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo "%%a"  "%%d"
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
-						robocopy /e "%%a" "%%d" >> %logfile% && type %logfile%
+						robocopy /e "%%a" "%%d" 
+						::	>> %logfile% && type %logfile%
 						PING 1.1.1.1 -n 1 -w 1000 >NUL
 						echo Borrando "%%~nd_old"
 						rd /s /q "%%~nd_old"
