@@ -7,6 +7,8 @@
 :: log
 :: issue 170504  Nuevo directorio de trabajo principal Onedrive - Hewlett-Packard
 ::                cambio variable ffsbatchDir
+:: issue 180801  quitar evernote y eclipse  poner 15-git\backup-bats
+
 
 @echo off
 cls

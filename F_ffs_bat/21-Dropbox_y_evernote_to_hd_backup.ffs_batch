@@ -1,72 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FreeFileSync XmlFormat="7" XmlType="BATCH">
-    <MainConfig>
-        <Comparison>
-            <Variant>TimeAndSize</Variant>
-            <Symlinks>Exclude</Symlinks>
-            <IgnoreTimeShift/>
-        </Comparison>
-        <SyncConfig>
-            <Variant>Mirror</Variant>
-            <CustomDirections>
-                <LeftOnly>right</LeftOnly>
-                <RightOnly>left</RightOnly>
-                <LeftNewer>right</LeftNewer>
-                <RightNewer>left</RightNewer>
-                <Different>none</Different>
-                <Conflict>none</Conflict>
-            </CustomDirections>
-            <DetectMovedFiles>false</DetectMovedFiles>
-            <DeletionPolicy>RecycleBin</DeletionPolicy>
-            <VersioningFolder Style="Replace"/>
-        </SyncConfig>
-        <GlobalFilter>
-            <Include>
-                <Item>*</Item>
-            </Include>
-            <Exclude>
-                <Item>\System Volume Information\</Item>
-                <Item>\$Recycle.Bin\</Item>
-                <Item>\RECYCLER\</Item>
-                <Item>\RECYCLED\</Item>
-                <Item>*\desktop.ini</Item>
-                <Item>*\thumbs.db</Item>
-            </Exclude>
-            <TimeSpan Type="None">0</TimeSpan>
-            <SizeMin Unit="None">0</SizeMin>
-            <SizeMax Unit="None">0</SizeMax>
-        </GlobalFilter>
-        <FolderPairs>
-            <Pair>
-                <Left>C:\Users\jarmengo\Dropbox\03-personal_info</Left>
-                <Right>F:\prsnl_bckp\03-personal_info</Right>
-            </Pair>
-            <Pair>
-                <Left>C:\Users\jarmengo\Dropbox\04-finances</Left>
-                <Right>F:\prsnl_bckp\04-finances</Right>
-            </Pair>
-            <Pair>
-                <Left>C:\Users\jarmengo\Dropbox\05-info_variada</Left>
-                <Right>F:\prsnl_bckp\05-info_variada</Right>
-            </Pair>
-            <Pair>
-                <Left>C:\Users\jarmengo\Dropbox\z-warea</Left>
-                <Right>F:\prsnl_bckp\z-warea</Right>
-            </Pair>
-            <Pair>
-                <Left>C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar</Left>
-                <Right>F:\prsnl_bckp\zz-clasificar_y_borrar</Right>
-            </Pair>
-            <Pair>
-                <Left>C:\Users\jarmengo\Evernote</Left>
-                <Right>F:\prsnl_bckp\Evernote</Right>
-            </Pair>
-        </FolderPairs>
-        <OnCompletion/>
-    </MainConfig>
-    <BatchConfig>
-        <HandleError>Popup</HandleError>
-        <RunMinimized>false</RunMinimized>
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="BATCH" XmlFormat="12">
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Variant>Mirror</Variant>
+        <DetectMovedFiles>false</DetectMovedFiles>
+        <DeletionPolicy>RecycleBin</DeletionPolicy>
+        <VersioningFolder Style="Replace"/>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLER\</Item>
+            <Item>\RECYCLED\</Item>
+            <Item>*\desktop.ini</Item>
+            <Item>*\thumbs.db</Item>
+        </Exclude>
+        <TimeSpan Type="None">0</TimeSpan>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left>C:\Users\jarmengo\Dropbox\03-personal_info</Left>
+            <Right>F:\prsnl_bckp\03-personal_info</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\jarmengo\Dropbox\04-finances</Left>
+            <Right>F:\prsnl_bckp\04-finances</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\jarmengo\Dropbox\05-info_variada</Left>
+            <Right>F:\prsnl_bckp\05-info_variada</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\jarmengo\Dropbox\z-warea</Left>
+            <Right>F:\prsnl_bckp\z-warea</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar</Left>
+            <Right>F:\prsnl_bckp\zz-clasificar_y_borrar</Right>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="false" Retry="0" Delay="5"/>
+    <PostSyncCommand Condition="Completion"/>
+    <Batch>
+        <ProgressDialog Minimized="false" AutoClose="false"/>
+        <ErrorDialog>Show</ErrorDialog>
+        <PostSyncAction>None</PostSyncAction>
         <LogfileFolder Limit="-1"/>
-    </BatchConfig>
+    </Batch>
 </FreeFileSync>

@@ -7,7 +7,7 @@
 ::  log 
 ::  170504 Directorios de trabajo principal en OneDrive - Hewlett-Packard 
 ::         cambio en variable directorio, cambio en fichero.csv
-::
+::  180801 Cambios en ficheros.csv  quitar directorio Eclipse, Evernote, poner 15-git
 ::#############################################################
 
 
