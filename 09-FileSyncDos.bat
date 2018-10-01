@@ -30,6 +30,8 @@ set reporttxt=0
 :: set directorio=C:\Users\jarmengo\Documents\15-git\backup-bats
 set directorio=C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats
 set dirtemp=C:\temp
+set dirOnenotebk=C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup
+
 
 if exist E:\prsnl_bckp set other="%directorio%\diskE_fichero.csv"
 if exist F:\prsnl_bckp set other="%directorio%\diskF_fichero.csv"
@@ -62,7 +64,10 @@ echo start  %STARTTIME%
 					if %verbose% == 1 echo %VRBS%  y ira a %file%
 
 copy %other% %file%
-
+:: ------------ borrar ficheros del directorio de bk de Onenote en Onedrive para evitar duplicaciones
+erase /s /q %dirOnenotebk%
+::  -  delay 5 seconds
+PING localhost -n 6 >NUL
 
 echo   WARNING:  Conecta el HD externo
 				if %verbose% == 1 echo %VRBS%  fichero config en %file%  

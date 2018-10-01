@@ -1,5 +1,5 @@
 ## release 170504  Directorio principal de trabajo Onedrive - Hewlett-Packard, change order ;
-"## release 180801 Quitamos eclipse, Evernote; ponemos 15.git";
+## release 180801 Quitamos eclipse Evernote ponemos 15.git;
 ##    source ;## destination
 ##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea
 ##    C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\JAR_Personal_onenote-150921;## C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921
