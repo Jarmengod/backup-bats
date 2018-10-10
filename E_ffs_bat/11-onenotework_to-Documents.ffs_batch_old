@@ -29,24 +29,8 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>C:\Users\jarmengo\Dropbox\03-personal_info</Left>
-            <Right>F:\prsnl_bckp\03-personal_info</Right>
-        </Pair>
-        <Pair>
-            <Left>C:\Users\jarmengo\Dropbox\04-finances</Left>
-            <Right>F:\prsnl_bckp\04-finances</Right>
-        </Pair>
-        <Pair>
-            <Left>C:\Users\jarmengo\Dropbox\05-info_variada</Left>
-            <Right>F:\prsnl_bckp\05-info_variada</Right>
-        </Pair>
-        <Pair>
-            <Left>C:\Users\jarmengo\Dropbox\z-warea</Left>
-            <Right>F:\prsnl_bckp\z-warea</Right>
-        </Pair>
-        <Pair>
-            <Left>C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar</Left>
-            <Right>F:\prsnl_bckp\zz-clasificar_y_borrar</Right>
+            <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup</Left>
+            <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup</Right>
         </Pair>
     </FolderPairs>
     <Errors Ignore="false" Retry="0" Delay="5"/>

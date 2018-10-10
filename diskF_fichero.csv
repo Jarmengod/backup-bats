@@ -1,10 +1,12 @@
 ## release 170504  Directorio principal de trabajo Onedrive - Hewlett-Packard, change order ;
 ## release 180801 Quitamos eclipse Evernote ponemos 15.git;
+"## release 181010 Mir de onenote bck tanto a Onedrive HP 98 como a Document 98 ; quitamos mir onedrive 98 vs document 98";
 ##    source ;## destination
 ##                          Copia fil bck onenote \appData\local;##                a dropbox\z-warea
 ##    C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup\JAR_Personal_onenote-150921;## C:\Users\jarmengo\Dropbox\z-warea\98-onenote\JAR_Personal_onenote-150921
 ##             copy files bck onenote ~\AppData\Local\Microsoft\Onenote\15.0\Backup\;##              a ~\Documents\98-onenote-backup dropbox 
 C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup;C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup
+C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup;C:\Users\jarmengo\Documents\98-onenote-backup
 ##                 Copy files dropbox        ;##               a Google drive  
 C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;C:\Users\jarmengo\Google Drive\zz-clasificar_y_borrar
 C:\Users\jarmengo\Dropbox\z-warea;C:\Users\jarmengo\Google Drive\z-warea
@@ -17,8 +19,8 @@ C:\Users\jarmengo\OneDrive - Hewlett-Packard\01-work;C:\Users\jarmengo\Documents
 C:\Users\jarmengo\OneDrive - Hewlett-Packard\02-work_old_projects;C:\Users\jarmengo\Documents\02-work_old_projects
 C:\Users\jarmengo\OneDrive - Hewlett-Packard\09-work_some_day;C:\Users\jarmengo\Documents\09-work_some_day
 C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git;C:\Users\jarmengo\Documents\15-git
-C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-Onenote_jar;C:\Users\jarmengo\Documents\98-Onenote_jar
-C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup;C:\Users\jarmengo\Documents\98-onenote-backup
+## C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-Onenote_jar;C:\Users\jarmengo\Documents\98-Onenote_jar
+## C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup;C:\Users\jarmengo\Documents\98-onenote-backup
 ##                   copy  Dropbox y evernote;##               a   HD 
 C:\Users\jarmengo\Dropbox\zz-clasificar_y_borrar;F:\prsnl_bckp\zz-clasificar_y_borrar
 C:\Users\jarmengo\Dropbox\z-warea;F:\prsnl_bckp\z-warea

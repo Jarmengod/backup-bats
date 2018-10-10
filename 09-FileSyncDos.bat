@@ -66,8 +66,8 @@ echo start  %STARTTIME%
 copy %other% %file%
 :: ------------ borrar ficheros del directorio de bk de Onenote en Onedrive para evitar duplicaciones
 erase /s /q %dirOnenotebk%
-::  -  delay 5 seconds
-PING localhost -n 6 >NUL
+::  -  delay 10 seconds 
+PING localhost -n 11 >NUL
 
 echo   WARNING:  Conecta el HD externo
 				if %verbose% == 1 echo %VRBS%  fichero config en %file%  
