@@ -24,7 +24,7 @@ set diskBck=E:
 
 if exist E:\prsnl_bckp set diskBck=E:
 if exist F:\prsnl_bckp set diskBck=F:
-if exist G:\prsnl_bckp set diskBck=G:
+if exist D:\prsnl_bckp set diskBck=D:
 
 
 :: set diskBck=F:

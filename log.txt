@@ -1,0 +1,21 @@
+ Start procces day 03/12/2018 and hour 12:40:21,70 
+....................   Verbose activado 
+....................   Estoy en ifnoexist 
+....................   Llamada a comprimir
+....................   Estoy en comprimirDirectorios
+....................   Estoy en directorio C:\Temp\98-bck
+....................   fin llamada comprimir
+....................   Llamada a Move a directoriofinal
+....................   fin llamada Move a directoriofinal
+....................   Llamada a emptyRecycleBin
+C:\$Recycle.bin\S-1-5-21-3339859558-593924042-3818789186-181177\$R2C1SY2.url
+C:\$Recycle.bin\S-1-5-21-3339859558-593924042-3818789186-181177\$R6HMAQK.url
+....................   fin llamada a emptyRecycleBin
+STARTTIME: 12:40:21,70
+ENDTIME: 12:40:21,93
+STARTTIMD: 03/12/2018 12:40:21,70 
+ENDTIMD:   03/12/2018 12:40:21,93 
+DURATION:  23 in centiseconds and in time format 0:0:0,23
+ECHO is off.
+final 
+Press any key to continue . . . 
