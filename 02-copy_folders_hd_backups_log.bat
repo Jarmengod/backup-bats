@@ -22,7 +22,7 @@ set VRBS=....................
 set reporttxt=%false%
 
 set Hdisk=C:
-set documents=%Hdisk%"\Users\jarmengo\OneDrive - Hewlett-Packard"
+set documents=%Hdisk%"\Users\jarmengo\OneDrive - HP Inc"
 set dropbox=%Hdisk%\Users\jarmengo\Dropbox
 
 

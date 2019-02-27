@@ -32,10 +32,6 @@
             <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup</Left>
             <Right>C:\Users\jarmengo\Documents\98-onenote-backup</Right>
         </Pair>
-        <Pair>
-            <Left>C:\Users\jarmengo\AppData\Local\Microsoft\OneNote\16.0\Backup</Left>
-            <Right>C:\Users\jarmengo\OneDrive - Hewlett-Packard\98-onenote-backup</Right>
-        </Pair>
     </FolderPairs>
     <Errors Ignore="false" Retry="0" Delay="5"/>
     <LogFolder/>

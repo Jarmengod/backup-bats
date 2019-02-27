@@ -69,6 +69,8 @@ copy %other% %file%
 erase /s /q %dirOnenotebk%
 	
 ::  -  delay 10 seconds 
+echo     borrados los ficheros de %dirOnenotebk%
+echo     10 segundos de paron
 PING localhost -n 11 >NUL
 
 echo   WARNING:  Conecta el HD externo

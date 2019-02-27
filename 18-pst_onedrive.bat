@@ -18,7 +18,7 @@ set VRBS=....................
 
 
 set documents="C:\Users\jarmengo\Documents"
-set diskBck="C:\Users\jarmengo\OneDrive - Hewlett-Packard"
+set diskBck="C:\Users\jarmengo\OneDrive - HP Inc"
 set workDirDoc=%documents%\emails
 set prsnlDirDoc=%documents%\emails_nowork
 set workDirOne=%diskBck%\emails

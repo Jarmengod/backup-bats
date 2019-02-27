@@ -24,9 +24,9 @@ set VRBS=....................
 set diskBck=C:
 set FFSdir="C:\Program Files\FreeFileSync"
 
-if exist E:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats\E_ffs_bat"
-if exist F:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats\F_ffs_bat"
-if exist G:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats\G_ffs_bat"
+if exist E:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - HP Inc\15-git\backup-bats\E_ffs_bat"
+if exist F:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - HP Inc\15-git\backup-bats\F_ffs_bat"
+if exist G:\prsnl_bckp set ffsbatchDir="C:\Users\jarmengo\OneDrive - HP Inc\15-git\backup-bats\G_ffs_bat"
 :: set ffsbatchDir="C:\Users\jarmengo\OneDrive - Hewlett-Packard\15-git\backup-bats"
 set zipProgram=%diskBck%\Zip7z
 :: set prsnlDir=%diskBck%\prsnl_bckp
