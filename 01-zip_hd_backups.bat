@@ -185,11 +185,13 @@ cd %prsnlDir%
 
 for /D %%x in (*) do ( 
 		if not "%%x"=="%dirOldBackups%" (
-			echo  comprimiendo %%x 	 >> %logfile% && type %logfile%
-			 if %reporttxt% EQU %true% ( %zipProgram%\7z a -t7z %%x.7z %%x >> %logfile% && type %logfile% )
-			 if %reporttxt% EQU %false%	(  %zipProgram%\7z a -t7z %%x.7z %%x )
+		   if not "%%d"=="%dirRepositorio%" (
+					echo  comprimiendo %%x 	 >> %logfile% && type %logfile%
+						if %reporttxt% EQU %true% ( %zipProgram%\7z a -t7z %%x.7z %%x >> %logfile% && type %logfile% )
+					if %reporttxt% EQU %false%	(  %zipProgram%\7z a -t7z %%x.7z %%x )
 				)
-			) 
+				) 
+			)
 		  
 	
 :: pause 
